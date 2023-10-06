@@ -1,0 +1,17 @@
+{
+  "name": "lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "prettier": "prettier --write *.js --config \"./.prettierrc\"",
+    "lint": "eslint *.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^10.0.1"
+  }
+}
