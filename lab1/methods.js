@@ -11,9 +11,10 @@ const titleChecker = (title) => {
 export function list(status) {
     let counter = 1
     if (status) {
+        console.log(`to-dos with status ${status}:`)
         for (let todo of todoList) {
             if (todo.status === status) {
-                console.log(`${counter}- ${todo.title}   Status: ${todo.status}`)
+                console.log(`${counter}- ${todo.title}`)
                 counter++
             }
         }
