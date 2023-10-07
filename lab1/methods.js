@@ -66,9 +66,9 @@ export function edit(title, newTitle, newStatus) {
 
 export function del(title) {
     const filteredList = todoList.filter(e => e.title !== title)
-    fs.writeFileSync('./data/data.json', JSON.stringify(filteredList, null, 2), 'utf8')
     if (filteredList.length === todoList.length - 1) {
         console.log('deleted')
+        fs.writeFileSync('./data/data.json', JSON.stringify(filteredList, null, 2))
     } else {
         console.log('not found')
     }
