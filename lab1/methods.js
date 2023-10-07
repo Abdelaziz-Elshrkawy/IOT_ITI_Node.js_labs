@@ -34,7 +34,7 @@ export function add(title) {
             title,
             status: 'to-do'
         })
-        fs.writeFileSync('./data/data.json', JSON.stringify(todoList), 'utf8')
+        fs.writeFileSync('./data/data.json', JSON.stringify(todoList, null, 2))
         console.log('added')
         console.log('your status set to to-do')
     }
@@ -59,14 +59,14 @@ export function edit(title, newTitle, newStatus) {
             console.log('status must be \'to-do\' or \'in-progress\' or \' done\'')
         }
         todoList.splice(todoList.indexOf(todoElement), 1, todoElement[0])
-        fs.writeFileSync('./data/data.json', JSON.stringify(todoList), 'utf8')
+        fs.writeFileSync('./data/data.json', JSON.stringify(todoList, null, 2), 'utf8')
     }
 }
 
 
 export function del(title) {
     const filteredList = todoList.filter(e => e.title !== title)
-    fs.writeFileSync('./data/data.json', JSON.stringify(filteredList), 'utf8')
+    fs.writeFileSync('./data/data.json', JSON.stringify(filteredList, null, 2), 'utf8')
     if (filteredList.length === todoList.length - 1) {
         console.log('deleted')
     } else {

@@ -1,1 +1,14 @@
-[{"title":"bag","status":"to-do"},{"title":"soul","status":"done"}]
+[
+    {
+        "title": "bag",
+        "status": "to-do"
+    },
+    {
+        "title": "soul",
+        "status": "done"
+    },
+    {
+        "title": "orange",
+        "status": "done"
+    }
+]
