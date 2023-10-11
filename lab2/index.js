@@ -1,7 +1,6 @@
 import fs from 'fs'
 import http from 'http'
 
-
 const server = http.createServer((req, res) => {
     switch (req.url) {
         case '/':

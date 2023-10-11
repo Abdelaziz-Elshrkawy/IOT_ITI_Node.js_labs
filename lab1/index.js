@@ -7,7 +7,7 @@ const todoApp = new Command()
 
 
 todoApp.command('add')
-    .argument('title', 'title')
+    .argument('title')
     .action((str, _option) => {
         add(str)
     })
