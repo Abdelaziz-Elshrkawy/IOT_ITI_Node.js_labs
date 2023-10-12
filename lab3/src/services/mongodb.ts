@@ -3,8 +3,8 @@ import { User } from "../types/typeUser";
 import dotenv from "dotenv";
 
 dotenv.config();
-export const mongodb_uri = process.env.mongodb_uri;
-export const mongodb_db = process.env.mongodb_db;
+const mongodb_uri = process.env.mongodb_uri;
+const mongodb_db = process.env.mongodb_db;
 
 const mongoConnection = new MongoClient(mongodb_uri as string);
 const collection: Collection = mongoConnection
