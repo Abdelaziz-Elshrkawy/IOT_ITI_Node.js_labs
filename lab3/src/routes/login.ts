@@ -1,4 +1,4 @@
-import { log } from "console";
+
 import { Request, Response, Router } from "express";
 import { databaseConnection } from "../services/db";
 
