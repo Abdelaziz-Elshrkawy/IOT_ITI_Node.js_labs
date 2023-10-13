@@ -8,5 +8,5 @@
 
 ### to run the MySQL
 
-- uncomment line 2,3,18,19
-- comment line 4,20
+- uncomment line 2,3,18,19 in './src/index.ts'
+- comment line 4,20 './src/index.ts'
