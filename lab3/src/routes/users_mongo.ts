@@ -4,8 +4,10 @@ import { User } from "../types/typeUser";
 
 export const mongoUsers: Router = Router();
 
-mongoUsers.get("/", async (req: Request, res: Response): Promise<void> => {
-  getUsers().then((data) => res.json(data));
+mongoUsers.get("/:id?", async (req: Request, res: Response): Promise<void> => {
+  getUsers(req.params.id).then((data) => {
+    res.json(data);
+  });
 });
 mongoUsers.post("/", async (req: Request, res: Response): Promise<void> => {
   const { username, age, password } = req.body;
@@ -14,7 +16,6 @@ mongoUsers.post("/", async (req: Request, res: Response): Promise<void> => {
     password,
     age,
   };
-
   addUser(user)
     .then(() => {
       res.json({ response: "Done" });
